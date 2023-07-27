@@ -37,7 +37,7 @@ body {
   font-weight: 600;
 }
 
-.hero-intro {
+.hero-text {
   font-size: clamp(1rem, 0.8333rem + 0.6667vw, 1.5rem);
   font-weight: 300;
   max-width: 33ch;
