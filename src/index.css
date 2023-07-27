@@ -1,4 +1,4 @@
-/* Custom Properties */
+/* ------ Custom Properties ------ */
 
 :root {
   --clr-neutral-100: #FFF;
@@ -9,7 +9,7 @@
 
 }
 
-/* Reset */
+/* ------ Reset ------ */
 
 *,
 *::before,
@@ -27,14 +27,16 @@ body {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  color: var(--clr-neutral-800);
   line-height: 1.1;
 }
 
-/* Typography */
+/* ------ Typography ------ */
 
 .hero-title {
   font-size: clamp(2rem, 2.6094rem + -2.4375vw, 0.171875rem);
   font-weight: 600;
+  color: var(--clr-neutral-900);
 }
 
 .hero-text {
@@ -43,7 +45,7 @@ body {
   max-width: 33ch;
 }
 
-/* Layout */
+/* ------ Layout ------ */
 
 .container {
   width: 90%;
@@ -60,13 +62,61 @@ nav {
   margin-bottom: 1em;
 }
 
-/* Components */
+/* ------ Components ------ */
 
 .logo {
+  /* prevent logo from expanding in Safari */
   max-width: 100px;
 }
 
 .hero-img {
   width: 80vw;
   margin: 0 5% 1em;
+}
+
+.section-img {
+  position: relative;
+  /* padding: 1px; */
+}
+
+.section-img-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: .75rem;
+  padding: .25rem;
+  border-radius: .3rem;
+  background-color: var(--clr-neutral-100);
+  font-size: .9rem;
+  text-transform: uppercase;
+  z-index: 1000;
+}
+
+.section-info > p {
+  font-weight: 300;
+  margin-bottom: .5rem;
+}
+
+.section-info-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .25rem;
+  margin-bottom: .5rem;
+}
+
+.section-info-details > p {
+  color: var(--clr-neutral-300);
+}
+
+.section-info-details-rating {
+  color: var(--clr-neutral-800) !important;
+}
+
+.section-info-details-dot {
+  font-size: .75rem;
+}
+
+.section-info-pricing {
+  font-weight: 600;
 }
