@@ -1,3 +1,16 @@
+/* Custom Properties */
+
+:root {
+  --clr-neutral-100: #FFF;
+  --clr-neutral-200: #0000001a;
+  --clr-neutral-300: #918E9B;
+  --clr-neutral-800: #222;
+  --clr-neutral-900: #000;
+
+}
+
+/* Reset */
+
 *,
 *::before,
 *::after {
@@ -14,3 +27,21 @@ body {
 body {
   margin: 0;
 }
+
+/* Typography */
+
+
+
+/* Layout */
+
+.container {
+  width: 95%;
+  margin-inline: auto;
+}
+
+nav {
+  padding: 1.5em;
+  border-bottom: .25rem solid var(--clr-neutral-200);
+}
+
+/* Components */
