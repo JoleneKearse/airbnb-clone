@@ -8,7 +8,15 @@ function App() {
     <>
       <NavBar />
       <Hero />
-      <Card />
+      <Card 
+        img="katie-zaferes.png"
+        label="sold out"
+        rating="5.0"
+        ratingCount={6}
+        country="USA"
+        blurb="Life lessons with Katie Zaferes"
+        price={136}
+      />
     </>
   )
 }

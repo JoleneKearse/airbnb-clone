@@ -1,22 +1,22 @@
-import KatieZaferes from "../assets/katie-zaferes.png"
+/* eslint-disable react/prop-types */
 import star from "../assets/star.png"
 
-const Card = () => {
+const Card = ({ img, label, rating, ratingCount, country, blurb, price }) => {
   return (
     <section className="container">
       <div className="section-img">
-        <img src={KatieZaferes} className="section-img-thumbnail" alt="Katie Saferes swimming for the USA" />
-        <p className="section-img-label">sold out</p>
+        <img src={`../public/${img}`} className="section-img-thumbnail" alt="" />
+        <p className="section-img-label">{label}</p>
       </div>
       <div className="section-info">
         <div className="section-info-details">
           <img src={star} alt="" />
-          <p className="section-info-details-rating">5.0</p>
-          <p className="section-info-details-customers">(6)</p>
-          <p className="section-info-details-country"><span className="section-info-details-dot">&#x2022; </span>USA</p>
+          <p className="section-info-details-rating">{rating}</p>
+          <p className="section-info-details-customers">({ratingCount})</p>
+          <p className="section-info-details-country"><span className="section-info-details-dot">&#x2022; </span>{country}</p>
         </div>
-        <p className="section-info-blurb">Life lessons with Katie Zaferes</p>
-        <p className="section-info rate"><span className="section-info-pricing">From $136</span> / person</p>
+        <p className="section-info-blurb">{blurb}</p>
+        <p className="section-info rate"><span className="section-info-pricing">From ${price}</span> / person</p>
       </div>
     </section>
   )
