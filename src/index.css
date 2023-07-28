@@ -31,6 +31,11 @@ body {
   line-height: 1.1;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 /* ------ Typography ------ */
 
 .hero-title {
@@ -62,6 +67,10 @@ nav {
   margin-bottom: 1em;
 }
 
+section {
+  padding: 1em;
+}
+
 /* ------ Components ------ */
 
 .logo {
@@ -74,9 +83,28 @@ nav {
   margin: 0 5% 1em;
 }
 
+.cards-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1em;
+  overflow-x: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  max-height: 100%;
+  flex: 0 0 auto;
+}
+
 .section-img {
   position: relative;
-  /* padding: 1px; */
+}
+
+.section-img-thumbnail {
+  width: 100%;
+  aspect-ratio: 1/1.5;
 }
 
 .section-img-label {
