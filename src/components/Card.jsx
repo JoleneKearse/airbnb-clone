@@ -1,29 +1,29 @@
 /* eslint-disable react/prop-types */
 import star from "../assets/star.png"
 
-const Card = ({ coverImg, rating, reviewCount, location, title, price, openSpots }) => {
+const Card = (props) => {
   let labelText
-  if (!openSpots) {
+  if (!props.experience.openSpots) {
     labelText = "sold out"
-  } else if (location === "Online") {
+  } else if (props.experience.location === "Online") {
     labelText = "online"
   }
 
   return (
     <section className="card">
       <div className="section-img">
-        <img src={`../public/${coverImg}`} className="section-img-thumbnail" alt="" />
+        <img src={`../public/${props.experience.coverImg}`} className="section-img-thumbnail" alt="" />
         {labelText && <p className="section-img-label">{labelText}</p>}
       </div>
       <div className="section-info">
         <div className="section-info-details">
           <img src={star} alt="" />
-          <p className="section-info-details-rating">{rating}</p>
-          <p className="section-info-details-customers">({reviewCount})</p>
-          <p className="section-info-details-country"><span className="section-info-details-dot">&#x2022; </span>{location}</p>
+          <p className="section-info-details-rating">{props.experience.stats.rating}</p>
+          <p className="section-info-details-customers">({props.experience.stats.reviewCount})</p>
+          <p className="section-info-details-country"><span className="section-info-details-dot">&#x2022; </span>{props.experience.location}</p>
         </div>
-        <p className="section-info-blurb">{title}</p>
-        <p className="section-info rate"><span className="section-info-pricing">From ${price}</span> / person</p>
+        <p className="section-info-blurb">{props.experience.title}</p>
+        <p className="section-info rate"><span className="section-info-pricing">From ${props.experience.price}</span> / person</p>
       </div>
     </section>
   )

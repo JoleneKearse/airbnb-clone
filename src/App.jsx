@@ -8,13 +8,7 @@ function App() {
     return (
       <Card
         key={experience.key}
-        coverImg={experience.coverImg}
-        rating={experience.stats.rating}
-        reviewCount={experience.stats.reviewCount}
-        location={experience.location}
-        title={experience.title}
-        price={experience.price}
-        openSpots={experience.openSpots}
+        experience={experience}
       />
     )
   })
